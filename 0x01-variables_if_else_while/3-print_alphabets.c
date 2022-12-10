@@ -1,6 +1,5 @@
 /*
  * File: 3-print_alphabets.c
- *
  * Auth: Brennan D Baraban
  */
 
@@ -22,5 +21,6 @@ for (letter = 'A'; letter <= 'Z'; letter++)
 putchar(letter);
 
 putchar('\n');
+
 return (0);
 }
