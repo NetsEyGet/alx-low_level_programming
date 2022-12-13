@@ -1,34 +1,12 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * times_table - prints the times table from 0 - 9.
- * Return: Nothing.
-*/
-void times_table(void)
+ * add - adds two numbers together.
+ * @i: The first number to be added.
+ * @j: The second number to be added.
+ * Return: the sum of two numbers.
+ */
+int add(int i, int j)
 {
-int i, j, res;
-for (i = 0; i <= 9; i++)
-{
-for (j = 0; j <= 9; j++)
-{
-res = (i * j);
-if (j != 0)
-{
-_putchar(',');
-_putchar(' ');
-}
-if (res >= 10)
-{
-_putchar((res / 10) + '0');
-_putchar((res % 10) + '0');
-}
-else if (res < 10 && j != 0)
-{
-_putchar(' ');
-_putchar((res % 10) + '0');
-}
-else
-_putchar((res % 10) + '0');
-}
-_putchar('\n');
-}
+return (i + j);
 }
