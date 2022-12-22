@@ -1,28 +1,30 @@
 #include "main.h"
-
 /**
- * _abs - returns absolute value of given int
- * @n: number for which we want to get the absolute value
+ * rot13 - encode a string with rot13
+ * @p: the string
  *
- * Return: absolute value of number n
- */
-
-int		_abs(int n)
-{
-return ((n < 0) ? -n : n);
-}
-
-/**
- * print_number - prints number on the standard output
- * @n: the number to be printed
+ *
+ * Return: rot
+ *
 */
-
-void	print_number(int n)
+char *rot13(char *p)
 {
-if (n < 0)
-_putchar('-');
+char *rot = p;
+int j = 0;
+char rotvalue1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char rotvalue2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-if (n >= 10 || n <= -10)
-print_number(_abs(n / 10));
-_putchar(_abs(n % 10) + '0');
+while (*rot)
+{
+for (j = 0; rotvalue1[j]; j++)
+{
+if (*rot == rotvalue1[j])
+{
+*rot = rotvalue2[j];
+break;
+}
+}
+rot++;
+}
+return (p);
 }
