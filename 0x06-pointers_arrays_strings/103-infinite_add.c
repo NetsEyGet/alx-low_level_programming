@@ -1,59 +1,60 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * print_line - prints a buffer line
- * @b: the pointed buffer
- * @c: the current position in buffer
- * @size: the max size of the content to print
- */
-
-void	print_line(char *b, int c, int size)
+ *   * infinite_add - add two numbers
+ *     * @n1: first number
+ *       * @n2: second number
+ *         * @r: the buffer
+ *           * @size_r: the size of r
+ *             * Return: char
+ *               */
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int i = 0;
 
-printf("%08x: ", c);
-while (i < 10)
-{
-if (i + c >= size)
-printf("  ");
-else
-printf("%02x", b[i + c]);
-if (i % 2 != 0)
-printf(" ");
-i++;
-}
+		int i = 0;
+			int j = 0;
+				int count = 0;
+					int digit = 0;
+						unsigned int digitval;
+							unsigned int value1 = 0;
+								unsigned int value2 = 0;
+									unsigned int value3 = 0;
+										char *p = r;
 
-i = 0;
-while (i < 10)
-{
-if (i + c < size)
-{
-if ((b[i + c] < 32 || b[i + c] > 126))
-printf(".");
-else
-printf("%c", b[i + c]);
-}
-i++;
-}
-printf("\n");
-}
-
-/**
- * print_buffer - prints a buffer
- * @b: the pointed buffer
- * @size: the size of the content to print
- */
-
-void	print_buffer(char *b, int size)
-{
-int i = 0;
-
-if (size <= 0)
-printf("\n");
-else
-while (i < size)
-{
-print_line(b, i, size);
-i += 10;
-}
+											while (n1[i + 1])
+													{
+																n1++;
+																		i++;
+																			}
+												while (i)
+														{
+																	value1 += n1[i] - '0';
+																			i--;
+																				}
+													while (n2[j + 1])
+															{
+																		n2++;
+																				j++;
+																					}
+														while (j)
+																{
+																			value2 += n2[j - '0'];
+																					j--;
+																						}
+															value3 = value1 + value2;
+																digitval = value3;
+																	while (digitval / 10)
+																			{
+																						count += 1;
+																								digitval /= 10;
+																									}
+																		count += 1;
+																			if (count > size_r)
+																						return (0);
+																				for (; count; count--)
+																						{
+																									digit = (value3 % 10);
+																											value3 = (value3 - digit);
+																													r[count] = digit + '0';
+																														}
+																					return (p);
 }
