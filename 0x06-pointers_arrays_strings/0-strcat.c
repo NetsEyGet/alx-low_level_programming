@@ -8,16 +8,24 @@
  * Return: two concat strings
 */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *str)
 {
+int i, j;
 
-int index = 0, dest_len = 0;
+i = 0;
+j = 0;
 
-while (dest[index++])
-dest_len++;
+while (dest[i] != '\0')
+{
+i++;
+}
 
-for (index = 0; src[index]; index++)
-dest[dest_len++] = src[index];
+while (str[j] != '\0')
+{
+dest[i + j] = str[j];
+j++;
+}
+dest[i + j] = '\0';
 
 return (dest);
 }
