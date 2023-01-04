@@ -7,7 +7,7 @@
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
-*/
+ */
 int palind2(char *a, int l)
 {
 if (*a == 0)
@@ -21,7 +21,7 @@ return (palind2(a + 1, l + 1));
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
-*/
+ */
 
 int palind3(char *a, int l)
 {
