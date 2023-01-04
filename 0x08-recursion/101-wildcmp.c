@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * wildcmp - compares two strings and returns 1 if the strings
- * can be considered identical, otherwise return 0.
- * @s1: string to compare to
- * @s2: string with wild character
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+* wildcmp - compares two strings and returns 1 if the strings
+* can be considered identical, otherwise return 0.
+* @n1: string to compare to
+* @n2: string with wild character
+*
+* Return: On success 1.
+* On error, -1 is returned, and errno is set appropriately.
+*/
 int wildcmp(char *n1, char *n2)
 {
 if (*n1 == '\0' && *n2 == '\0')
