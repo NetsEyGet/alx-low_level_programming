@@ -6,5 +6,5 @@ int factorial(int a);
 int _pow_recursion(int a, int b);
 int _sqrt_recursion(int a);
 int is_prime_number(int a);
-int is_palindrome(char *n);
+int is_palindrome(char *s);
 int wildcmp(char *n1, char *n2);
