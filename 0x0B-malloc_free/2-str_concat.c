@@ -38,7 +38,7 @@ return (NULL);
 for (k = 0; s1[k] != '\0'; k++)
 {
 q[k] = s1[k];
-																}
+}
 for (k = k, e = 0; s2[e] != '\0'; e++, k++)
 {
 																q[k] = s2[e];
