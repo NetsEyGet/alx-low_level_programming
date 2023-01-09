@@ -23,7 +23,7 @@ coun = coun + 1;
 
 r = malloc(sizeof(char) * coun + 1);
 
-if (r == NULL )
+if (r == NULL)
 {
 return (NULL);
 }
