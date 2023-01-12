@@ -52,8 +52,10 @@ for (j = n2_len - 1; j >= 0; j--)
 																{
 digit2 = n2_digits[j] - '0';
 
-sum += prod_digits[i + j + 1] + (digit1 * digit2);
+sum += prod_digits[i + j + 1] + (digit1 *digit2);
+
 prod_digits[i + j + 1] = sum % 10;
+
 sum /= 10;
 																}
 if (sum > 0)
