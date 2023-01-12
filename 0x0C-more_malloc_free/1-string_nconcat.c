@@ -54,7 +54,7 @@ len2 = _strlen(s2);
 else
 len2 = n;
 
-cnct = malloc(sizeof(char) * ((len1 + len2) + 1));
+cnct = malloc(sizeof(char) * ((len1 + len2) +1));
 
 if (cnct == NULL)
 return (NULL);
