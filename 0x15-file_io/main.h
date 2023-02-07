@@ -2,6 +2,7 @@
 #define FILE_IO
 
 #include <stdio.h>
+#include <elf.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
